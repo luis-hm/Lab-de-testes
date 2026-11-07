@@ -26,7 +26,7 @@
 | Casos de teste com incidência de erro | |
 | Casos de teste corrigidos pelo desenvolvedor | |
 
-> Números dos automatizados: rode `npm test` e copie os totais do resumo final do terminal / `cypress/reports/index.html`.
+> Números dos automatizados: rode `npm test` e copie os totais do resumo final do terminal.
 
 ### Resumo por US
 
@@ -35,7 +35,7 @@
 | US002 | | | | | | |
 | US003 | | | | | | |
 | US004 | | | | | | |
-| US005 | | | | | | |
+| US005 | Luis Felipe Holanda Martins | 3 | 2 | 4 | 1 | INC-01 |
 | US006 | | | | | | |
 | US007 | | | | | | |
 | US008 | | | | | | |

@@ -7,8 +7,8 @@
 | ID | Recurso | Finalidade | Nível de uso |
 |---|---|---|---|
 | **M1** | Máquina de cada integrante (Windows, Linux ou macOS) com Node.js 20+, Git e navegador Chrome | Executar testes manuais e escrever/rodar os testes automatizados | Manual + automatizado |
-| **M2** | Cypress 15.21 + `cypress-mochawesome-reporter` (instalados via `npm install`) | Automação dos casos de teste e geração do relatório HTML com evidências (prints e vídeos) | Automatizado |
-| **M3** | GitHub (repositório + GitHub Actions, runner `ubuntu-latest`) | Versionamento, revisão por PR e execução automática de todos os testes a cada push | Automatizado (CI) |
+| **M2** | Cypress 15.21 (instalado via `npm install`) | Automação dos casos de teste, com vídeos e prints como evidência | Automatizado |
+| **M3** | GitHub (repositório) | Versionamento e compartilhamento dos testes e da documentação | Manual + automatizado |
 | **S1** | Swag Labs — https://www.saucedemo.com (servidor público da Sauce Labs) | Sistema sob teste; não requer instalação | Manual + automatizado |
 
 **Massa de dados:** usuários públicos do Swag Labs (`standard_user`, `locked_out_user`, `problem_user`, `performance_glitch_user`, `error_user`, `visual_user`, senha `secret_sauce`) e os 6 produtos do catálogo — ver `cypress/fixtures/`.
@@ -33,7 +33,7 @@
 | Arthur Gomes Menezes | | | | 09/11 a 16/11 |
 | João Fenelon Ramos Soares | | | | 09/11 a 16/11 |
 | Leticia De Oliveira Da Silva | | | | 09/11 a 16/11 |
-| Luis Felipe Holanda Martins | | | | 09/11 a 16/11 |
+| Luis Felipe Holanda Martins | US005 – Finalizar compra | CT-US005-03, 04, 05 | CT-US005-01, 02 | 07/11 (concluído) |
 | Ricardo Alves Da Silva | | | | 09/11 a 16/11 |
 | Samira Kelvia Oliveira De Sousa | | | | 09/11 a 16/11 |
 
@@ -44,8 +44,8 @@
 | 07/11 – 09/11 | Preparar ambiente (`npm install` + smoke), escolher US | Smoke passando em todas as máquinas; tabela 1.3 preenchida |
 | 09/11 – 11/11 | Aplicar as técnicas e projetar os CTs | `docs/03-casos-de-teste/USxxx-*.md` com classes, limites e CTs |
 | 11/11 – 13/11 | Executar os testes manuais | Tabela de execução preenchida + prints; incidentes registrados |
-| 11/11 – 14/11 | Automatizar os CTs no Cypress | `cypress/e2e/USxxx-*.cy.js` com PR aprovado |
-| 15/11 – 16/11 | Rodar suíte completa, consolidar números e conclusões | `cypress/reports/index.html`; `docs/05-relatorio-final.md` |
+| 11/11 – 14/11 | Automatizar os CTs no Cypress | `cypress/e2e/USxxx-*.cy.js` no repositório |
+| 15/11 – 16/11 | Rodar suíte completa, consolidar números e conclusões | vídeos/prints do Cypress; `docs/05-relatorio-final.md` |
 | 17/11 | Montar e ensaiar a apresentação | Slides |
 | **18/11** | **Entrega do relatório e apresentação presencial** | — |
 
@@ -57,7 +57,7 @@
 - **Técnicas obrigatórias:** particionamento em classes de equivalência e análise de valor-limite em todas as US; grafo de causa e efeito nas US com combinação de condições (ex.: US001, US005).
 - **Rastreabilidade:** `USxxx` → `CExxx(USxxx)` → `CT-USxxx-NN` → `it('CT-USxxx-NN | ...')`.
 - **Critério de entrada:** smoke (`00-smoke.cy.js`) passando.
-- **Critério de saída:** 100% dos CTs executados, todos os defeitos registrados em [04-incidentes.md](04-incidentes.md), relatório do Cypress gerado.
+- **Critério de saída:** 100% dos CTs executados, todos os defeitos registrados em [04-incidentes.md](04-incidentes.md), suíte do Cypress executada.
 
 ### 2.1 Pontos de partida por US (sugestões para aplicar as técnicas)
 
@@ -71,4 +71,4 @@
 | US007 Catálogo dinâmico | Modo Lazy Load × Spinner × Slider | Slider: primeiro (dot 0) e último indicador (dot 5) |
 | US008 Detalhes | `id` existente × inexistente × não numérico | `id` = −1, **0**, 1 … 4, **5**, 6 |
 
-> Dica: a US005 RN02 diz que o checkout não pode começar com carrinho vazio — vale testar (`/checkout-step-one.html` com carrinho vazio). Também vale repetir os CTs com `problem_user`/`error_user`, que têm defeitos propositais.
+> Exemplo pronto para seguir: [US005-checkout.md](03-casos-de-teste/US005-checkout.md) (5 CTs, as 3 técnicas, 1 defeito encontrado). Também vale repetir os CTs com `problem_user`/`error_user`, que têm defeitos propositais.

@@ -9,7 +9,6 @@
     "test:chrome": "cypress run --browser chrome"
   },
   "devDependencies": {
-    "cypress": "^15.21.1",
-    "cypress-mochawesome-reporter": "^3.8.4"
+    "cypress": "^15.21.1"
   }
 }

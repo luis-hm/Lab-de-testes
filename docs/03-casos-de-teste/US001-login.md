@@ -1,4 +1,4 @@
-# US001 — Realizar login *(exemplo de referência)*
+# US001 — Realizar login *(exemplo do template — não conta no mínimo)*
 
 > **Este arquivo é o modelo.** A US001 não conta no mínimo do trabalho; serve para mostrar o nível de detalhe esperado em cada US: técnica aplicada → classes/limites → casos de teste → execução manual e automatizada.
 
@@ -40,22 +40,26 @@ O Username/Password válido é uma **string exata**: qualquer caractere a menos 
 graph LR
   C1[C1: Username preenchido] -->|não| E1[E1: Username is required]
   C1 --> A1((∧))
-  C2[C2: Password preenchida] -->|não| A0((∧))
-  C1 --> A0
-  A0 --> E2[E2: Password is required]
-  C2 --> A1
-  A1 --> A2((∧))
-  C3[C3: Credenciais válidas] --> A2
-  A1 --> A3((∧))
-  C3 -->|não| A3
+  C2[C2: Password preenchida] -->|não| A1
+  A1 --> E2[E2: Password is required]
+  C1 --> A2((∧))
+  C2 --> A2
+  A2 --> A3((∧))
+  C3[C3: Credenciais válidas] -->|não| A3
   A3 --> E3[E3: do not match]
   A2 --> A4((∧))
-  C4[C4: Não bloqueado] --> A4
-  A4 --> E5[E5: Products]
-  A2 --> A5((∧))
-  C4 -->|não| A5
+  C3 --> A4
+  A4 --> A5((∧))
+  C4[C4: Não bloqueado] -->|não| A5
   A5 --> E4[E4: locked out]
+  A4 --> A6((∧))
+  C4 --> A6
+  A6 --> E5[E5: Products]
 ```
+
+![Figura (US001) 1 — Grafo de causa e efeito da US001](../img/US001-grafo-causa-efeito.png)
+
+*Figura (US001) 1: Grafo de causa e efeito – US001 (∧ = E lógico).*
 
 | Regra | C1 | C2 | C3 | C4 | Efeito | CT |
 |---|---|---|---|---|---|---|
@@ -87,9 +91,9 @@ Observação da execução: `locked_out_user` com senha **errada** recebe E3 (n�
 
 | ID | Funcionalidade | Descrição | Entradas | Valor da Entrada | Resultado esperado | Resultado do Testador 1 (Luis) |
 |---|---|---|---|---|---|---|
-| CT-US001-09 | Login | Fechar mensagem de erro | Username / Password | `""` / `""` + clique no “X” | Mensagem de erro some | _a executar_ (Data: dd/11/2026. Passou / Falhou – ver Figura X) |
-| CT-US001-10 | Login | Username com 1 caractere | Username / Password | `s` / `secret_sauce` | “…do not match any user in this service” | _a executar_ (Data: dd/11/2026. Passou / Falhou – ver Figura X) |
-| CT-US001-11 | Login | Bloqueado com senha errada | Username / Password | `locked_out_user` / `x` | “…do not match any user in this service” | _a executar_ (Data: dd/11/2026. Passou / Falhou – ver Figura X) |
+| CT-US001-09 | Login | Fechar mensagem de erro | Username / Password | `""` / `""` + clique no “X” | Mensagem de erro some | Data da Execução: 07/11/2026. Passou |
+| CT-US001-10 | Login | Username com 1 caractere | Username / Password | `s` / `secret_sauce` | “…do not match any user in this service” | Data da Execução: 07/11/2026. Passou |
+| CT-US001-11 | Login | Bloqueado com senha errada | Username / Password | `locked_out_user` / `x` | “…do not match any user in this service” | Data da Execução: 07/11/2026. Passou |
 
 ## 7. Registro de execução — testes automatizados
 

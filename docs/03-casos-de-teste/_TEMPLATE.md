@@ -61,7 +61,7 @@ Evidências: salve os prints em `docs/img/USxxx-*.png` e referencie aqui: `![Fig
 
 | ID | Teste no Cypress | Resultado | Data |
 |---|---|---|---|
-| CT-USxxx-02 | `it('CT-USxxx-02 \| ...')` | Passou / Falhou (ver `cypress/reports/index.html`) | |
+| CT-USxxx-02 | `it('CT-USxxx-02 \| ...')` | Passou / Falhou (ver resumo do `npm test`) | |
 
 ## 8. Observações
 
