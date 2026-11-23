@@ -36,7 +36,7 @@
 | US003 | | | | | | |
 | US004 | | | | | | |
 | US005 | Luis Felipe Holanda Martins | 3 | 2 | 4 | 1 | INC-01 |
-| US006 | | | | | | |
+| US006 | Arthur Gomes Menezes | 5 | 2 | 5 | 2 | INC-03 |
 | US007 | | | | | | |
 | US008 | | | | | | |
 | **Total** | | | | | | |
