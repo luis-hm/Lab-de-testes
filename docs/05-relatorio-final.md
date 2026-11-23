@@ -37,7 +37,7 @@
 | US004 | | | | | | |
 | US005 | Luis Felipe Holanda Martins | 3 | 2 | 4 | 1 | INC-01 |
 | US006 | | | | | | |
-| US007 | | | | | | |
+| US007 | Ricardo Alves Da Silva | 4 | 2 | 6 | 0 | — (rascunho INC-04 não reproduzido na versão atual) |
 | US008 | | | | | | |
 | **Total** | | | | | | |
 
