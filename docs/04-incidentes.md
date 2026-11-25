@@ -36,6 +36,22 @@ Todo CT que **falhar** (manual ou automatizado) gera um incidente aqui. O Swag L
 
 ## Incidentes dos testes automatizados
 
+### INC-04 — Funcionalidade “Dynamic Catalog” ausente no menu lateral *(rascunho / não reproduzível na versão atual)*
+
+| ID | Status | Responsável pela identificação | Prioridade de correção | Descrição do erro | Data e nome de quem corrigiu |
+|---|---|---|---|---|---|
+| CT-US007-01 a 06 | Não reproduzível | Ricardo Alves da Silva | Alta | Rascunho original registrava ausência da opção “Dynamic Catalog” (“Lazy Load”, “Spinner” e “Slider”) no menu lateral ☰. Na versão atual do Swag Labs (`https://www.saucedemo.com`), a opção está presente e funcional (ver `img/US007-ct04-modos-carregados.png`, `cypress/pages/DynamicCatalogPage.js` e `docs/03-casos-de-teste/US007-catalogo-dinamico.md`). | — |
+
+**Tipo:** Automatizado (`CT-US007-01`, `CT-US007-02`) e Manual (`CT-US007-03` a `CT-US007-06`).
+**Passos para reproduzir:**
+1. Fazer login com `standard_user` / `secret_sauce`.
+2. Clicar no ícone ☰ no canto superior esquerdo da página “Products”.
+3. Verificar as opções disponíveis no menu lateral.
+
+**Esperado (US007):** exibir a opção “Dynamic Catalog” permitindo acessar os modos “Lazy Load”, “Spinner” e “Slider”.
+**Obtido (rascunho original × versão atual):** o rascunho inicial descrevia apenas “All Items”, “About”, “Logout” e “Reset App State” no menu lateral; porém, na versão atual do Swag Labs, “Dynamic Catalog” é exibido normalmente no menu lateral e permite abrir os três modos.
+**Reprodutibilidade:** não reproduzível na versão atual de `https://www.saucedemo.com`.
+
 ### INC-0N — <título curto do defeito>
 
 | ID | Status | Responsável pela identificação | Prioridade de correção | Descrição do erro | Data e nome de quem corrigiu |
