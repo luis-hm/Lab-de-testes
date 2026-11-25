@@ -30,7 +30,7 @@
 
 | Nome | US atribuída | CTs manuais | CTs automatizados | Cronograma |
 |---|---|---|---|---|
-| Arthur Gomes Menezes | | | | 09/11 a 16/11 |
+| Arthur Gomes Menezes | US006 – Navegar pelo menu lateral | CT-US006-03, 04, 05, 06, 07 | CT-US006-01, 02 | 09/11 a 18/11 (concluído) |
 | João Fenelon Ramos Soares | | | | 09/11 a 16/11 |
 | Leticia De Oliveira Da Silva | | | | 09/11 a 16/11 |
 | Luis Felipe Holanda Martins | US005 – Finalizar compra | CT-US005-03, 04, 05 | CT-US005-01, 02 | 07/11 (concluído) |
