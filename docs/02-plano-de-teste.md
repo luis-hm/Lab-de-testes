@@ -34,7 +34,7 @@
 | João Fenelon Ramos Soares | | | | 09/11 a 16/11 |
 | Leticia De Oliveira Da Silva | | | | 09/11 a 16/11 |
 | Luis Felipe Holanda Martins | US005 – Finalizar compra | CT-US005-03, 04, 05 | CT-US005-01, 02 | 07/11 (concluído) |
-| Ricardo Alves Da Silva | | | | 09/11 a 16/11 |
+| Ricardo Alves Da Silva | US007 – Visualizar catálogo dinâmico | CT-US007-03, 04, 05, 06 | CT-US007-01, 02 | 09/11 a 23/11 (concluído) |
 | Samira Kelvia Oliveira De Sousa | US003 – Adicionar ao carrinho; US004 – Remover do carrinho | CT-US003-04, 05, 06; CT-US004-04, 05, 06 | CT-US003-01, 02, 03; CT-US004-01, 02, 03 | 09/11 a 16/11 |
 
 ### 1.4 Cronograma
